@@ -37,6 +37,7 @@ Route::group(['middleware' => ['jwt.verify']], function () {
     Route::get('/menu/id_menu/{id_menu}', [MenuController::class, 'id']);
     Route::get('/menu/makanan', [MenuController::class, 'makanan']);
     Route::get('/menu/minuman', [MenuController::class, 'minuman']);
+    Route::get('/menu', [MenuController::class, 'get']);
 
     Route::get('/meja/tersedia', [MejaController::class, 'tersedia']);
 
@@ -80,7 +81,7 @@ Route::group(['middleware' => ['jwt.verify', 'Role:kasir']], function () {
 
 Route::group(['middleware' => ['jwt.verify', 'Role:manager']], function () {
 
-    Route::get('/transaksi/get', [TransaksiController::class, 'Get']);
-
+        Route::get('/transaksi/get', [TransaksiController::class, 'Get']);
+        
 });
 
