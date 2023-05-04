@@ -27,7 +27,7 @@ class DashboardController extends Controller
 
     public function CountKasir()
     {
-        $Kasir = User::where('role', 'kasir')->count();
+        $Kasir = User::where('role','!=', 'admin')->count();
         return $Kasir;
     }
 
