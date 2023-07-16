@@ -3,7 +3,7 @@
   command = "composer install && php artisan build"
 
 [build.environment]
-  PHP_VERSION = "7.4" # Ganti sesuai dengan versi PHP yang digunakan di aplikasi Anda
+  PHP_VERSION = "8.2" # Ganti sesuai dengan versi PHP yang digunakan di aplikasi Anda
 
 [[redirects]]
   from = "/*"
